@@ -1,9 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Reddit+Sans:ital,wght@0,200..900;1,200..900&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Poetsen+One&family=Reddit+Sans:ital,wght@0,200..900;1,200..900&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Poetsen+One&family=Reddit+Sans:ital,wght@0,200..900;1,200..900&display=swap");
+body {
+  margin: 0;
+  padding: 0;
+}
 
 /* HEADER IS STARTED */
- 
+
 .header {
   position: fixed;
   top: 0;
@@ -15,11 +18,11 @@
 }
 
 .header.black-bg {
-    background-color: #00000090;
+  background-color: #00000090;
 }
 
 .header.black-bg .header-nav .header-link {
-  color: #fff !important; 
+  color: #fff !important;
 }
 
 .header.black-bg .header-nav .header-link::after {
@@ -47,7 +50,7 @@
   height: 50px;
 }
 
-.navbar-brand>img{
+.navbar-brand > img {
   animation: ursin 2s infinite linear;
 }
 @keyframes ursin {
@@ -56,15 +59,12 @@
   }
   25% {
     transform: scale(1.1);
-   
   }
   50% {
     transform: scale(1.2);
-    
   }
   75% {
     transform: scale(1.1);
-   
   }
   100% {
     transform: scale(1);
@@ -79,7 +79,6 @@
   color: black !important;
   position: relative;
 }
-
 
 .header-link::after {
   content: " ";
@@ -103,32 +102,55 @@
 
 /* HEADER IS FINISHED */
 /* MAIN IS STARTED */
-.intro{
-    background: rgba(7, 15, 25, 0.6);
-position: relative;
-height: 420px;
-max-width: 100%;
-width: 100%;
+.section1 {
+  position: relative;
+  text-align: center;
+  background-image: url(../img/main/photo_2024-05-11_18-47-14.jpg);
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  padding: 100px 0;
+  height: 100vh;
+  filter: grayscale(20%) contrast(90%);
 }
 
-.intro-bg{
-    position: absolute;
-    width: 100%; 
-    max-width: 100%; 
-    height: auto;
-    filter: brightness(95%);
-}
-
-.intro-text{
-  width: 100%;
-  height: 100%;
-  display: flex;
+.banner-text {
   position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+.banner-text h1 {
   font-family: "Poetsen One", sans-serif;
   font-weight: 700;
-  font-style: italic;
-  color: #097f91;
-  justify-content: center;
-  align-items: flex-end;
-  font-size: 48px;
-} 
+}
+
+
+.section2{
+  padding-top: 20px;
+  background-color: rgba(245, 245, 220, 1);
+}
+
+.logo-components {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: minmax(210px, max-content);
+  grid-gap: 40px;
+}
+.img {
+  max-width: 100%;
+}
+@media screen and (max-width:966px) {
+  .logo-components {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .img {
+    
+    width: 90%;
+  }
+  
+}
