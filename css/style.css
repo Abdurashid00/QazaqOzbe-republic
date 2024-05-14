@@ -108,7 +108,7 @@ body {
   background-image: url(../img/main/photo_2024-05-11_18-47-14.jpg);
   background-size: cover;
   background-position: center;
-  color: #fff;
+  color: #3c78d8;
   padding: 100px 0;
   height: 100vh;
   filter: grayscale(20%) contrast(90%);
@@ -142,6 +142,94 @@ body {
 .img {
   max-width: 100%;
 }
+.section3{
+  background-color: rgba(245, 245, 220, 1);
+
+}
+
+.section3-car {
+  display: flex;
+  justify-content: space-evenly;
+  padding-top: 30px;
+  padding-bottom: 100px;
+}
+
+.section3-car .carousel .carousel-inner{
+  width: 400px ;
+}
+
+
+.carousel-item img{
+  height: 500px;
+
+}
+
+.section3 .container p{
+  font-family: "Poetsen One", sans-serif;
+  font-weight: 700;
+  font-size: 50px;
+  color: #3c78d8;
+  margin-bottom: 0 ;
+  background-color: rgba(245, 245, 220, 1);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 @media screen and (max-width:966px) {
   .logo-components {
     display: flex;
@@ -152,5 +240,18 @@ body {
     
     width: 90%;
   }
-  
+
+  .section3-car{
+    flex-direction: column;
+  }
+  .car2{
+    margin-top: 40px;
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+  .car1{
+    margin-top: 40px;
+    padding-left: 100px;
+    padding-right: 100px;
+  }
 }
