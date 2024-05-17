@@ -75,8 +75,8 @@ body {
   font-family: "Reddit Sans", sans-serif;
   font-weight: 700;
 }
-.nav-link {
-  color: black !important;
+.header .navbar .container .navbar-nav .nav-link {
+  color: black;
   position: relative;
 }
 
@@ -127,8 +127,7 @@ body {
   font-weight: 700;
 }
 
-
-.section2{
+.section2 {
   padding-top: 20px;
   background-color: rgba(245, 245, 220, 1);
 }
@@ -142,9 +141,8 @@ body {
 .img {
   max-width: 100%;
 }
-.section3{
+.section3 {
   background-color: rgba(245, 245, 220, 1);
-
 }
 
 .section3-car {
@@ -154,102 +152,62 @@ body {
   padding-bottom: 100px;
 }
 
-.section3-car .carousel .carousel-inner{
-  width: 400px ;
+.section3-car .carousel .carousel-inner {
+  width: 400px;
 }
 
-
-.carousel-item img{
+.carousel-item img {
   height: 500px;
-
 }
 
-.section3 .container p{
+.section3 .container .title {
   font-family: "Poetsen One", sans-serif;
   font-weight: 700;
   font-size: 50px;
   color: #3c78d8;
-  margin-bottom: 0 ;
+  margin-bottom: 0;
   background-color: rgba(245, 245, 220, 1);
 }
 
+.section3 .container .con-text {
+  font-family: "Poetsen One", sans-serif;
+  font-weight: 700;
+  font-size: 50px;
+  color: #3c78d8;
+}
 
+.con-text::before {
+  content: " ";
+  padding-left: 55px;
+}
 
+.con-text::after {
+  content: attr(data-second-word);
+}
+.black::after {
+  font-size: 34px;
+  color: black;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-@media screen and (max-width:966px) {
+@media screen and (max-width: 966px) {
   .logo-components {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
   .img {
-    
     width: 90%;
   }
 
-  .section3-car{
+  .section3-car {
     flex-direction: column;
   }
-  .car2{
+  .car2 {
     margin-top: 40px;
     padding-left: 100px;
     padding-right: 100px;
   }
-  .car1{
+  .car1 {
     margin-top: 40px;
     padding-left: 100px;
     padding-right: 100px;
