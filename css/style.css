@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Reddit+Sans:ital,wght@0,200..900;1,200..900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Poetsen+One&family=Reddit+Sans:ital,wght@0,200..900;1,200..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap");
+
 body {
   margin: 0;
   padding: 0;
@@ -101,6 +102,7 @@ body {
 }
 
 /* HEADER IS FINISHED */
+
 /* MAIN IS STARTED */
 .section1 {
   position: relative;
@@ -138,9 +140,11 @@ body {
   grid-auto-rows: minmax(210px, max-content);
   grid-gap: 40px;
 }
+
 .img {
   max-width: 100%;
 }
+
 .section3 {
   background-color: rgba(245, 245, 220, 1);
 }
@@ -149,15 +153,17 @@ body {
   display: flex;
   justify-content: space-evenly;
   padding-top: 30px;
-  padding-bottom: 100px;
 }
 
 .section3-car .carousel .carousel-inner {
   width: 400px;
 }
 
+.carousel-control-prev,
+.carousel-control-next,
 .carousel-item img {
   height: 500px;
+  object-fit: cover;
 }
 
 .section3 .container .title {
@@ -166,28 +172,86 @@ body {
   font-size: 50px;
   color: #3c78d8;
   margin-bottom: 0;
-  background-color: rgba(245, 245, 220, 1);
+  background-color: #f5f5dc;
+  text-align: center;
 }
 
 .section3 .container .con-text {
   font-family: "Poetsen One", sans-serif;
   font-weight: 700;
-  font-size: 50px;
+  font-size: 28px;
   color: #3c78d8;
+  text-align: center;
+  padding-top: 10px;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: black;
+  border-radius: 50%;
 }
 
 .con-text::before {
   content: " ";
-  padding-left: 55px;
 }
 
 .con-text::after {
   content: attr(data-second-word);
 }
 .black::after {
-  font-size: 34px;
+  font-size: 26px;
   color: black;
 }
+/* MAIN IS FINISHED */
+
+/* FOOTER IS FINISHED */
+
+.footer {
+  background-color: #f5f5dc;
+}
+.footer-title {
+  font-family: "Poetsen One", sans-serif;
+  font-weight: 700;
+  font-size: 32px;
+  color: black;
+  text-transform: uppercase;
+}
+.links{
+  display: flex;
+}
+
+.icon-link{
+  width: 45%;
+}
+
+.text-link{
+  width: 55%;
+}
+
+.ul {
+
+  list-style-type: none;
+  display: flex;
+  justify-content: space-evenly;
+  margin: auto;
+  padding-left: 0;
+}
+
+.link {
+  color: #000;
+  text-decoration: none;
+ text-transform: capitalize;
+ font-family: "Poetsen One", sans-serif;
+ font-weight: 700;
+}
+
+.icon-link i {
+  font-size: 42px; /* Adjust the size as needed */
+}
+
+
+/* FOOTER IS FINISHED */
+/* FMEDIA */
 
 @media screen and (max-width: 966px) {
   .logo-components {
@@ -201,15 +265,63 @@ body {
 
   .section3-car {
     flex-direction: column;
+    align-items: center;
   }
-  .car2 {
-    margin-top: 40px;
-    padding-left: 100px;
-    padding-right: 100px;
-  }
+
+  .car2,
   .car1 {
     margin-top: 40px;
-    padding-left: 100px;
-    padding-right: 100px;
+    margin-left: 20px;
+    margin-right: 20px;
   }
+
+  .section3 .container .title {
+    font-size: 34px;
+  }
+
+}
+
+@media screen and (max-width: 767px){
+.links{
+  flex-direction: column;
+}
+.ul{
+  justify-content: space-around;
+}
+.icon-link{
+  width: 100%;
+  padding-bottom: 1rem;
+}
+
+.text-link{
+  width: 100%;
+  padding-bottom: 2rem;
+}
+}
+
+
+@media screen and (max-width: 425px) {
+  .section3-car .carousel .carousel-inner {
+    width: 300px;
+  }
+  .carousel-control-prev,
+  .carousel-control-next,
+  .carousel-item img {
+    height: 400px;
+  }
+
+  .footer-title {
+    font-size: 18px;
+  }
+  .icon-link i {
+    font-size: 28px; /* Adjust the size as needed */
+  }
+
+  .link{
+    font-size: 14px;
+  }
+  .section3 .container .title {
+    font-size: 24px;
+    line-height: 170%;
+}
 }
