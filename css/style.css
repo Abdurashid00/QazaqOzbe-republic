@@ -216,20 +216,19 @@ body {
   color: black;
   text-transform: uppercase;
 }
-.links{
+.links {
   display: flex;
 }
 
-.icon-link{
+.icon-link {
   width: 45%;
 }
 
-.text-link{
+.text-link {
   width: 55%;
 }
 
 .ul {
-
   list-style-type: none;
   display: flex;
   justify-content: space-evenly;
@@ -240,20 +239,38 @@ body {
 .link {
   color: #000;
   text-decoration: none;
- text-transform: capitalize;
- font-family: "Poetsen One", sans-serif;
- font-weight: 700;
+  text-transform: capitalize;
+  font-family: "Poetsen One", sans-serif;
+  font-weight: 700;
 }
 
 .icon-link i {
   font-size: 42px; /* Adjust the size as needed */
 }
 
-
 /* FOOTER IS FINISHED */
-/* FMEDIA */
+/* MEDIA */
+@media screen and (max-width: 1200px) {
+  .nav-item{
+    font-size: 13px;
+  }
+}
+@media screen and (max-width: 1061px) {
 
-@media screen and (max-width: 966px) {
+  .nav-item{
+    font-size: 12px;
+  }
+  .header-link {
+
+    display: flex;
+    padding-left: 1rem;
+    font-size: 13px;
+    font-weight: 700;
+  }
+}
+
+
+@media screen and (max-width: 967px) {
   .logo-components {
     display: flex;
     flex-direction: column;
@@ -278,29 +295,34 @@ body {
   .section3 .container .title {
     font-size: 34px;
   }
-
 }
 
-@media screen and (max-width: 767px){
-.links{
-  flex-direction: column;
-}
-.ul{
-  justify-content: space-around;
-}
-.icon-link{
-  width: 100%;
-  padding-bottom: 1rem;
+@media screen and (max-width: 768px) {
+  .links {
+    flex-direction: column;
+  }
+  .ul {
+    justify-content: space-around;
+  }
+  .icon-link {
+    width: 100%;
+    padding-bottom: 1rem;
+  }
+
+  .text-link {
+    width: 100%;
+    padding-bottom: 2rem;
+  }
 }
 
-.text-link{
-  width: 100%;
-  padding-bottom: 2rem;
-}
-}
-
-
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 426px) {
+  
+.header .navbar .container .navbar-nav .nav-link  {
+    font-size: 12px;
+  }
+  .section1{
+    height: 60vh;
+  }
   .section3-car .carousel .carousel-inner {
     width: 300px;
   }
@@ -317,11 +339,17 @@ body {
     font-size: 28px; /* Adjust the size as needed */
   }
 
-  .link{
+  .link {
     font-size: 14px;
   }
   .section3 .container .title {
     font-size: 24px;
     line-height: 170%;
+  }
 }
+
+@media screen and (max-width: 378px) {
+  .header-link {
+    display: none;
+  }
 }
