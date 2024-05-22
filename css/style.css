@@ -204,7 +204,7 @@ body {
 
 .border2:hover {
   border-top-left-radius: 100%;
-  border-top-right-radius: 75~``%;
+  border-top-right-radius: 75%;
   border-bottom-left-radius: 42%;
   border-bottom-right-radius: 120%;
   transition: border-radius 0.6s ease-in;
