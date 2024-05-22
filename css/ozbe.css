@@ -1,0 +1,147 @@
+@import url("https://fonts.googleapis.com/css2?family=Reddit+Sans:ital,wght@0,200..900;1,200..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap");
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* HEADER IS STARTED */
+
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: #ffffff37;
+  color: #000;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.header.black-bg {
+  background-color: #00000090;
+}
+
+.header.black-bg .header-nav .header-link {
+  color: #fff !important;
+}
+
+.header.black-bg .header-nav .header-link::after {
+  content: " ";
+  width: 100%;
+  height: 2px;
+  background-color: rgb(255, 255, 255);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transform: scale(0);
+}
+
+.header.black-bg .header-nav .header-link:hover::after {
+  transform: scale(1);
+  transition: 0.5s ease;
+}
+
+.header-nav {
+  backdrop-filter: blur(20px) !important;
+}
+
+.logo {
+  width: 100px;
+  height: 50px;
+}
+
+.navbar-brand > img {
+  animation: ursin 2s infinite linear;
+}
+@keyframes ursin {
+  0% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(1.1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  75% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.nav-item {
+  font-family: "Reddit Sans", sans-serif;
+  font-weight: 700;
+}
+.header .navbar .container .navbar-nav .nav-link {
+  color: black;
+  position: relative;
+}
+
+.header-link::after {
+  content: " ";
+  width: 100%;
+  height: 2px;
+  background-color: black;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transform: scale(0);
+}
+
+.header-link:hover::after {
+  transform: scale(1);
+  transition: 0.5s ease;
+}
+
+.nav-content {
+  background-color: rgba(255, 255, 255, 0);
+}
+/* HEADER IS FINISHED */
+
+/* MAIN IS STARTED */
+
+
+
+
+
+
+
+
+/* MEDIA */
+@media screen and (max-width: 1200px) {
+  .nav-item{
+    font-size: 13px;
+  }
+}
+@media screen and (max-width: 1061px) {
+
+  .nav-item{
+    font-size: 12px;
+  }
+  .header-link {
+
+    display: flex;
+    padding-left: 1rem;
+    font-size: 13px;
+    font-weight: 700;
+  }
+}
+
+
+
+@media screen and (max-width: 426px) {
+  
+.header .navbar .container .navbar-nav .nav-link  {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 378px) {
+  .header-link {
+    display: none;
+  }
+}

@@ -175,7 +175,18 @@ body {
   background-color: #f5f5dc;
   text-align: center;
 }
+ 
+.border {
+  border-top-left-radius: 20%;
+  border-top-right-radius: 50%;
+  transition: border-radius 0.5s ease-in-out; /* Added transition here */
+}
 
+.border:hover {
+  border-top-left-radius: 50%;
+  border-top-right-radius: 20%;
+  transition: border-radius 0.5s ease-in; /* Optional: can be different, but must be consistent for smooth effect */
+}
 .section3 .container .con-text {
   font-family: "Poetsen One", sans-serif;
   font-weight: 700;
