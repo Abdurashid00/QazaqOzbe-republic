@@ -175,10 +175,10 @@ body {
   background-color: #f5f5dc;
   text-align: center;
 }
- 
+
 .border1 {
   border-top-left-radius: 100%;
-  border-top-right-radius: 50%;
+  border-top-right-radius: 80%;
   border-bottom-left-radius: 42%;
   border-bottom-right-radius: 100%;
   transition: border-radius 0.6s ease-in-out;
@@ -189,15 +189,15 @@ body {
   border-top-left-radius: 50%;
   border-top-right-radius: 100%;
   border-bottom-left-radius: 100%;
-  border-bottom-right-radius: 42%;
+  border-bottom-right-radius: 50%;
   transition: border-radius 0.6s ease-in;
-  transform: scale(1.1) ;
+  transform: scale(1.05);
 }
 .border2 {
   border-top-left-radius: 50%;
   border-top-right-radius: 100%;
   border-bottom-left-radius: 100%;
-  border-bottom-right-radius: 42%;
+  border-bottom-right-radius: 50%;
   transition: border-radius 0.6s ease-in-out;
   transform: scale(1);
 }
@@ -208,7 +208,7 @@ body {
   border-bottom-left-radius: 42%;
   border-bottom-right-radius: 120%;
   transition: border-radius 0.6s ease-in;
-  transform: scale(1.1) ;
+  transform: scale(1.05);
 }
 .section3 .container .con-text {
   font-family: "Poetsen One", sans-serif;
@@ -236,9 +236,6 @@ body {
   font-size: 26px;
   color: black;
 }
-
-
-
 
 /* MAIN IS FINISHED */
 
@@ -289,24 +286,15 @@ body {
 /* FOOTER IS FINISHED */
 /* MEDIA */
 @media screen and (max-width: 1200px) {
-  .nav-item{
+  .nav-item {
     font-size: 13px;
   }
 }
 @media screen and (max-width: 1061px) {
-
-  .nav-item{
+  .nav-item {
     font-size: 12px;
   }
-  .header-link {
-
-    display: flex;
-    padding-left: 1rem;
-    font-size: 13px;
-    font-weight: 700;
-  }
 }
-
 
 @media screen and (max-width: 967px) {
   .logo-components {
@@ -354,11 +342,10 @@ body {
 }
 
 @media screen and (max-width: 426px) {
-  
-.header .navbar .container .navbar-nav .nav-link  {
+  .header .navbar .container .navbar-nav .nav-link {
     font-size: 12px;
   }
-  .section1{
+  .section1 {
     height: 60vh;
   }
   .section3-car .carousel .carousel-inner {
@@ -383,11 +370,5 @@ body {
   .section3 .container .title {
     font-size: 24px;
     line-height: 170%;
-  }
-}
-
-@media screen and (max-width: 378px) {
-  .header-link {
-    display: none;
   }
 }
