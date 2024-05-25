@@ -159,6 +159,7 @@ body {
   transition: transform 0.2s ease-in;
 }
 .product-details {
+  font-family: "Poetsen One", sans-serif;
   color: white;
   padding: 15px;
   position: relative;
@@ -171,12 +172,10 @@ body {
   margin-top: 20px;
 }
 .carousel-button {
-  background-color: #007bff;
-  border: none;
-  color: white;
-  padding: 10px 20px;
-  margin: 0 10px;
   cursor: pointer;
+  background-color:  #214087 !important;
+  border: none;
+  color: rgba(255, 255, 255, 0.573);
 }
 
 
