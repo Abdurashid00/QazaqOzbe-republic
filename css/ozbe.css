@@ -6,13 +6,13 @@ body {
   padding: 0;
 }
 
-.btn{
-  background-color:  #214087 !important;
-  border-color: white !important;}
+.btn {
+  background-color: #214087 !important;
+  border-color: white !important;
+}
 
-.btn:hover{
+.btn:hover {
   box-shadow: 0 0 3px 3px white;
-
 }
 /* HEADER IS STARTED */
 
@@ -81,7 +81,6 @@ body {
 .nav-item {
   font-family: "Reddit Sans", sans-serif;
   font-weight: 700;
-
 }
 .header .navbar .container .navbar-nav .nav-link {
   color: #214087;
@@ -119,7 +118,9 @@ body {
   padding-top: 100px;
 }
 .carousel {
-  overflow-x: hidden;
+  overflow-x: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 .carousel-track {
   display: flex;
@@ -173,20 +174,22 @@ body {
 }
 .carousel-button {
   cursor: pointer;
-  background-color:  #214087 !important;
+  background-color: #214087 !important;
   border: none;
   color: rgba(255, 255, 255, 0.573);
 }
 
+.sec2{
+  background-color: #214087;
+}
 
-
-
-
-
-
-
-
-
+.sec2-text{
+  font-family: "Poetsen One", sans-serif;
+  font-weight: 700;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: white;
+}
 
 
 
