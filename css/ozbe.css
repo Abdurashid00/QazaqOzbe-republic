@@ -145,19 +145,19 @@ body {
   object-fit: cover;
   transition: opacity 0.5s ease;
 }
-.default-img {
+.sec1-default-img {
   opacity: 1;
 }
-.hover-img {
+.sec1-hover-img {
   opacity: 0;
 }
-.product-card:hover .default-img {
+.product-card:hover .sec1-default-img {
   opacity: 0;
 }
-.product-card:hover .hover-img {
+.product-card:hover .sec1-hover-img {
   opacity: 1;
   transform: scale(1.2);
-  transition: transform 0.2s ease-in;
+  transition: transform 0.3s ease-in;
 }
 .product-details {
   font-family: "Poetsen One", sans-serif;
@@ -179,11 +179,12 @@ body {
   color: rgba(255, 255, 255, 0.573);
 }
 
-.sec2{
+.sec2 {
   background-color: #214087;
+  padding: 20px;
 }
 
-.sec2-text{
+.sec2-text {
   font-family: "Poetsen One", sans-serif;
   font-weight: 700;
   padding-top: 10px;
@@ -191,19 +192,81 @@ body {
   color: white;
 }
 
+.sec2-content {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 10px;
+}
+
+.left-img img {
+  height: 1000px;
+  border-radius: 20px;
+}
+
+.sec2-product-card {
+  border: white 5px solid;
+  min-width: 300px;
+  min-height: 410px;
+  overflow: hidden;
+  border-radius: 15px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+}
+.sec2-product-image {
+  position: absolute;
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  transition: opacity 0.5s ease;
+}
+.sec2-default-img {
+  opacity: 1;
+}
+.sec2-hover-img {
+  opacity: 0;
+}
+.sec2-product-card:hover .sec2-default-img {
+  opacity: 0;
+}
+.sec2-product-card:hover .sec2-hover-img {
+  opacity: 1;
+  transform: scale(1.03);
+  transition: transform 0.3s ease-in;
+}
+.sec2-product-details {
+  font-family: "Poetsen One", sans-serif;
+  color: white;
+  padding: 15px;
+  position: absolute;
+  width: 100%;
+  height: 100px;
+}
+
+.sec2-product-text{
+  width: 210px;
+}
+
+.sec2-product-text::after{
+  content: " ";
+  width: 41%;
+  height: 2px;
+  background-color: rgb(255, 255, 255);
+  position: absolute;
+  top: 40px;
+  left: 13px;
+  opacity: 0;
+}
+.sec2-product-text:hover::after{
+  opacity: 1;
+  transition: 0.2s ease;
+}
 
 
-
-
-
-
-
-
-
-
-
-
-
+.img-bottom{
+  padding-top: 100px;
+}
 
 
 
