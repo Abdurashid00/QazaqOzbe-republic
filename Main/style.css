@@ -107,7 +107,7 @@ body {
 .section1 {
   position: relative;
   text-align: center;
-  background-image: url(../img/main/photo_2024-05-11_18-47-14.jpg);
+  background-image: url(./main/photo_2024-05-11_18-47-14.jpg);
   background-size: cover;
   background-position: center;
   color: #3c78d8;
