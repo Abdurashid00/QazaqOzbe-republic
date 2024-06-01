@@ -17,14 +17,14 @@
     />
 
     <link
-    rel="icon"
-    href="../Main/logo/Снимок экрана 2024-05-12 163613.png"
-    type="image/png"
-  />
+      rel="icon"
+      href="../Main/logo/Снимок экрана 2024-05-12 163613.png"
+      type="image/png"
+    />
   </head>
 
   <body>
-    <header class="header"> 
+    <header class="header">
       <nav class="navbar header-nav navbar-expand-lg">
         <div class="container nav-content">
           <a class="navbar-brand mb-2" href="./index.html">
@@ -389,13 +389,67 @@
                   />
                 </div>
                 <div class="sec2-product-card-bottom-text">
-                <a class="icon-link icon-link-hover text-color" href="#">
-                  UZBEKISTAN
-                  <i class="icon-hov fas fa-arrow-right"></i>
-                </a>
-              </div>
+                  <a class="icon-link icon-link-hover text-color" href="#">
+                    UZBEKISTAN
+                    <i class="icon-hov fas fa-arrow-right"></i>
+                  </a>
+                </div>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+      <section class="sec3 position-relative">
+        <div id="carouselExampleDark" class="carousel slide">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img
+                src="./img/ozbe/sec3-1.png"
+                class="d-block w-100 "
+                alt="..."
+              />
+              <div class="carousel-caption-3 d-none d-md-block">
+                <h5 class="text-color-h-3">22 нормально?</h5>
+                <p class="text-color-p-3">
+                  kettu
+                </p>
+                <button class="">Узнать цену</button>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img
+                src="./img/ozbe/sec3-2.png"
+                class="d-block w-100"
+                alt="..."
+              />
+              <div class="carousel-caption-3 d-none d-md-block">
+                <h5>Second slide label</h5>
+                <p>
+                  Some representative placeholder content for the second slide.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-indicators-3">
+            <button
+              type="button"
+              data-bs-target="#carouselExampleDark"
+              data-bs-slide-to="0"
+              class="carousel-button-3"
+              aria-label="Slide 1"
+            >
+              <i class="fas fa-angle-left"></i>
+            </button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleDark"
+              data-bs-slide-to="1"
+              aria-label="Slide 2"
+              class="carousel-button-3 active"
+              aria-current="true"
+            >
+              <i class="fas fa-angle-right"></i>
+            </button>
           </div>
         </div>
       </section>
@@ -448,6 +502,16 @@
           updateButtonsState();
         }
       });
+
+      document
+        .querySelectorAll(".carousel-button-3")
+        .forEach((button, index) => {
+          button.addEventListener("click", function () {
+            const carousel = document.querySelector("#carouselExampleDark");
+            const bsCarousel = new bootstrap.Carousel(carousel);
+            bsCarousel.to(index);
+          });
+        });
     </script>
   </body>
 </html>

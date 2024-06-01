@@ -113,7 +113,6 @@ body {
   color: #3c78d8;
   padding: 100px 0;
   height: 100vh;
-  filter: grayscale(20%) contrast(90%);
 }
 
 .banner-text {
