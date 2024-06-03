@@ -469,7 +469,7 @@
               <img src="./img/ozbe/sec4-1-1.png" alt="" class="sec4-card-img sec4-def">
               <img src="./img/ozbe/sec4-1-2.png" alt="" class="sec4-card-img sec4-hov">
               <div class="sec4-product-details">
-                  <h5>Жилетка OZBE</h5>
+                  <h5 class="sec4-text-underline">Жилетка OZBE</h5>
                   <p>330 000 UZS</p>
                   <button class="sec4-btn">Выберите варианты</button>
                 </div>
@@ -478,7 +478,7 @@
               <img src="./img/ozbe/sec4-2-1.png" alt="" class="sec4-card-img sec4-def">
               <img src="./img/ozbe/sec4-2-2.png" alt="" class="sec4-card-img sec4-hov">
               <div class="sec4-product-details">
-                  <h5>Жилетка OZBE</h5>
+                  <h5 class="sec4-text-underline">Жилетка OZBE</h5>
                   <p>330 000 UZS</p>
                   <button class="sec4-btn">Выберите варианты</button>
                 </div>
@@ -487,7 +487,7 @@
               <img src="./img/ozbe/sec4-3 (1).png" alt="" class="sec4-card-img sec4-def">
               <img src="./img/ozbe/sec4-3 (2).png" alt="" class="sec4-card-img sec4-hov">
               <div class="sec4-product-details">
-                  <h5>Жилетка OZBE</h5>
+                  <h5 class="sec4-text-underline">Куртка OZBE</h5>
                   <p>330 000 UZS</p>
                   <button class="sec4-btn">Выберите варианты</button>
                 </div>
@@ -496,7 +496,7 @@
               <img src="./img/ozbe/sec4-4-1.png" alt="" class="sec4-card-img sec4-def">
               <img src="./img/ozbe/sec4-4-2.png" alt="" class="sec4-card-img sec4-hov">
               <div class="sec4-product-details">
-                  <h5>Жилетка OZBE</h5>
+                  <h5 class="sec4-text-underline">Чехол OZBE</h5>
                   <p>330 000 UZS</p>
                   <button class="sec4-btn">Выберите варианты</button>
                 </div>
@@ -505,7 +505,7 @@
               <img src="./img/ozbe/sec4-5-1.png" alt="" class="sec4-card-img sec4-def">
               <img src="./img/ozbe/sec4-5-2.png" alt="" class="sec4-card-img sec4-hov">
               <div class="sec4-product-details">
-                  <h5>Жилетка OZBE</h5>
+                  <h5 class="sec4-text-underline">Куртка OZBE</h5>
                   <p>330 000 UZS</p>
                   <button class="sec4-btn">Выберите варианты</button>
                 </div>
@@ -514,13 +514,22 @@
               <img src="./img/ozbe/sec4-6-1.png" alt="" class="sec4-card-img sec4-def">
               <img src="./img/ozbe/sec4-6-2.png" alt="" class="sec4-card-img sec4-hov">
               <div class="sec4-product-details">
-                  <h5>Жилетка OZBE</h5>
+                  <h5 class="sec4-text-underline">Жилетка OZBE</h5>
                   <p>330 000 UZS</p>
                   <button class="sec4-btn">Выберите варианты</button>
                 </div>
             </div>
           </div>
         </div>
+        <div class="sec4-carousel-buttons">
+          <button class="sec4-carousel-button" id="prevButton">
+            <i class="fas fa-angle-left"></i>
+          </button>
+          <button class="sec4-carousel-button" id="nextButton">
+            <i class="fas fa-angle-right"></i>
+          </button>
+        </div>
+      </div>
       </section>
     </main>
 
@@ -535,6 +544,7 @@
       const prevBtn = document.getElementById("prevBtn");
       const nextBtn = document.getElementById("nextBtn");
       const itemWidth = items[0].clientWidth + 20; // ширина карточки + отступ
+      console.log(items[0])
       const itemCount = items.length;
       const maxScrollIndex = itemCount - 5; // Учитывая, что мы останавливаемся на карточке с индексом 14
       let currentIndex = 0;
@@ -581,6 +591,59 @@
             bsCarousel.to(index);
           });
         });
+
+        document.addEventListener('DOMContentLoaded', function() {
+  const track = document.querySelector(".sec4-carousel-track");
+  const items = document.querySelectorAll(".sec4-product-card");
+  const prevBtn = document.getElementById("prevButton");
+  const nextBtn = document.getElementById("nextButton");
+  const itemWidth = items[0].clientWidth - 34; // ширина карточки + отступ
+  const itemCount = items.length;
+  const visibleItems = Math.floor(document.querySelector(".sec4-carousel").clientWidth / itemWidth);
+  const maxScrollIndex = itemCount - visibleItems;
+  let currentIndex = 0;
+
+  // Начальная установка на первый реальный элемент
+  scrollToIndex(currentIndex);
+
+  // Обновление состояния кнопок
+  updateButtonsState();
+
+  // Функция для перемещения к определенному индексу
+  function scrollToIndex(index) {
+    if (index < 0) {
+      index = 0;
+    } else if (index > maxScrollIndex) {
+      index = maxScrollIndex;
+    }
+    track.style.transition = "transform 0.5s ease";
+    track.style.transform = `translateX(-${itemWidth * index}px)`;
+    currentIndex = index;
+  }
+
+  // Функция для обновления состояния кнопок
+  function updateButtonsState() {
+    prevBtn.disabled = currentIndex === 0;
+    nextBtn.disabled = currentIndex === maxScrollIndex;
+  }
+
+  // Обработчики событий для кнопок "вперед" и "назад"
+  nextBtn.addEventListener("click", () => {
+    if (currentIndex < maxScrollIndex) {
+      scrollToIndex(currentIndex + 1);
+      updateButtonsState();
+    }
+  });
+
+  prevBtn.addEventListener("click", () => {
+    if (currentIndex > 0) {
+      scrollToIndex(currentIndex - 1);
+      updateButtonsState();
+    }
+  });
+});
+
+        
     </script>
   </body>
 </html>

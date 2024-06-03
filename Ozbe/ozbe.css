@@ -465,12 +465,11 @@ body {
   display: flex;
   transform: translateX(0px);
   transition: transform 0.5s ease;
-  overflow: hidden;
 }
 
 .sec4-product-card {
   min-width: 430px;
-  height: 750px;
+  height: 650px;
   margin: 10px;
   overflow: hidden;
   display: flex;
@@ -481,7 +480,6 @@ body {
 
 .sec4-card-img {
   position: absolute;
-  border: #000000 2px solid;
   width: 100%;
   height: 500px;
   object-fit: cover;
@@ -503,7 +501,7 @@ body {
 .sec4-product-card:hover .sec4-hov{
   opacity: 1;
   transform: scale(1.2);
-  transition: transform 0.3s ease-in, opacity 0.5s ease;
+  transition: transform 0.4s ease-in, opacity 0.5s ease;
 }
 
 .sec4-product-details{
@@ -514,11 +512,57 @@ body {
   padding: 15px;
   position: absolute;
   top: 500px;
+  
 }
 
+.sec4-btn{
+  width: 100%;
+  border: 2px solid #214087;
+  border-radius: 10px;
+  background-color: #fffff0;
+  color: #214087;
+  font-size: 20px;
+  padding: 6px 0;
+}
 
+.sec4-btn:hover{
+  box-shadow: 0 0 1px 1px #214087;
+}
 
+.sec4-text-underline::after{
+  content: " ";
+  width: 40%;
+  height: 2px;
+  background-color: #214087;
+  top: 40px;
+  position: absolute;
+  left: 13px;
+  opacity: 0;
+}
 
+.sec4-text-underline:hover::after{
+  opacity: 1;
+  transition: transform 0.4s ease-in, opacity 0.5s ease;
+
+}
+
+.sec4-product-card:hover .sec4-text-underline::after {
+  opacity: 1; 
+   transition: transform 0.4s ease-in, opacity 0.5s ease;
+
+}
+
+.sec4-carousel-buttons{
+  display: flex;
+  justify-content: center;
+}
+.sec4-carousel-button{
+  padding: 0 10px; 
+  margin: 0 20px 20px 10px;
+  border: none;
+  background-color: #fffff0;
+  color: #214087;
+}
 /* MEDIA QUERIES */
 
 @media screen and (max-width: 1200px) {
