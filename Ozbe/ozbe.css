@@ -558,6 +558,52 @@ body {
   background-color: #fffff0;
   color: #214087;
 }
+
+/* FOOTER IS STARTED */
+
+.footer {
+  background-color:#fffff0 ;
+}
+.footer-title {
+  font-family: "Poetsen One", sans-serif;
+  font-weight: 700;
+  font-size: 32px;
+  color: black;
+  text-transform: uppercase;
+}
+.links {
+  display: flex;
+}
+
+.icon-link {
+  width: 45%;
+}
+
+.text-link {
+  width: 55%;
+}
+
+.ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-evenly;
+  margin: auto;
+  padding-left: 0;
+}
+
+.link {
+  color: #000;
+  text-decoration: none;
+  text-transform: capitalize;
+  font-family: "Poetsen One", sans-serif;
+  font-weight: 700;
+}
+
+.icon-link i {
+  font-size: 42px; /* Adjust the size as needed */
+}
+
+/* FOOTER IS FINISHED */
 /* MEDIA QUERIES */
 
 @media screen and (max-width: 1200px) {
