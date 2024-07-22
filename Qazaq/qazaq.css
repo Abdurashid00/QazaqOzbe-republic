@@ -103,9 +103,50 @@ body {
   /* HEADER IS FINISHED */
 
 /* MAIN IS STARTED */
+.carousel-item .carousel-caption{
+  bottom: 25% ;
+}
+.carousel-text{
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+font-size: 100px;
+}
+.carousel-btn{
+  padding: 12px 24px;
+  text-transform: uppercase;
+  background-color: #242424;
+  color: #ffffff;
+  border: none;
+  font-weight: 600;
+  transition: .5s;
+  cursor: pointer;
+  border-radius: 4px;
+}
 
+.carousel-btn:hover{
+  background-color: #4e5364;
+  
+  padding: 14px 28px;
+  transition: .5s;
+}
 
+.carousel-indicators .dot {
+            height: 10px !important;
+            width: 10px !important;
+            margin: 0 5px;
+            display: inline-block;
+            background-color: #717171;
+            cursor: pointer;
+            transition: width 0.8s ease, height 0.8s ease, background-color 0.5s ease;
+        }
 
+        .carousel-indicators  .dot.active {
+            width: 30px !important;
+            height: 10px !important;
+            background-color: white; /* Change to match the active state style */
+            border-radius: 35%;
+        }
 
 
 
