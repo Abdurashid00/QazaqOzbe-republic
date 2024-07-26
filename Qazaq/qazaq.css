@@ -5,6 +5,8 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+
+
 }
 /* HEADER IS STARTED */
 
@@ -103,14 +105,28 @@ body {
   /* HEADER IS FINISHED */
 
 /* MAIN IS STARTED */
+
+.swiper{
+  margin-top: 40px;
+}
 .carousel-item .carousel-caption{
   bottom: 25% ;
 }
+
+
 .carousel-text{
-  display: flex;
-  align-items: center;
   font-weight: 700;
 font-size: 100px;
+}
+
+.carousel-text-px{
+  font-weight: 700;
+font-size: 90px;
+}
+.carousel-text-pl{
+  margin-left: 30px;
+  font-weight: 700;
+font-size: 90px;
 }
 .carousel-btn{
   padding: 12px 24px;
@@ -122,37 +138,72 @@ font-size: 100px;
   transition: .5s;
   cursor: pointer;
   border-radius: 4px;
+
+}
+
+.carousel-btn> a{
+  text-decoration: none;
+  list-style: none;
+  color: #ffffff;
+}
+
+.carousel-btn> a:hover{
+  color: #ffffff;
 }
 
 .carousel-btn:hover{
   background-color: #4e5364;
-  
   padding: 14px 28px;
   transition: .5s;
 }
 
-.carousel-indicators .dot {
-            height: 10px !important;
-            width: 10px !important;
-            margin: 0 5px;
-            display: inline-block;
-            background-color: #717171;
-            cursor: pointer;
-            transition: width 0.8s ease, height 0.8s ease, background-color 0.5s ease;
-        }
 
-        .carousel-indicators  .dot.active {
-            width: 30px !important;
-            height: 10px !important;
-            background-color: white; /* Change to match the active state style */
-            border-radius: 35%;
-        }
+.carousel-indicators button {
+  width: 12px !important;
+  height: 12px !important;
+  border: none;
+  border-radius: 20% / 50%;
+  background-color: gray;
+  transition: background-color 0.3s;
+  margin: 0 5px !important;
+}
+.carousel-indicators button.active {
+  width: 40px !important;
+}
+
+.infos-wrapper{
+  display: flex;
+  justify-content: space-between;
+  padding: 40px 60px;
+}
 
 
+.infos-card{
+  width: calc(20% - 51.2px);
+  min-width: 240px;
+  padding: 32px 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #fff;
+  box-shadow: 0 4px 40px rgba(38, 41, 43, .07);
+  border-radius: 12px;
+}
 
+.infos-card img{
+  width: 64px;
+  height: 64px;
+  -o-object-fit: contain;
+  object-fit: contain;
+  margin-bottom: 32px;
+}
 
-
-
+.infos-card p{
+  font-weight: 500;
+  font-size: 14px;
+  text-align: center;
+    color: #242424;
+}
 
 
 /* FOOTER IS STARTED */
