@@ -343,9 +343,32 @@ font-size: 90px;
 }
 
 
+.hidden {
+  display: none !important;
+  visibility: hidden !important;
+}
+
+.covers-link {
+  display: block;
+  background-color: #f2f2f2;
+  padding: 24px 0;
+  text-align: center;
+  font-weight: 600;
+  font-size: 20px;
+  color: #242424;
+  transition: .3s;
+  text-decoration: none;
+}
+
+.covers-link:hover {
+  background-color: #242424;
+  color: #fff;
+}
+
 /* FOOTER IS STARTED */
 
  .footer {
+  padding-top: 40px;
     background-color: #f5f5dc;
   }
   .footer-title {
@@ -400,11 +423,90 @@ font-size: 90px;
     .nav-item {
       font-size: 12px;
     }
+    .carousel-item .carousel-caption {
+      bottom: 20%;
   }
+  .carousel-text {
+ 
+    font-size: 70px;
+}
+.carousel-text-px {
+  font-size: 60px;
+
+  }
+  .cover-title{
+    font-size: 30px;
+  }
+  .cover-all{
+    font-size: 14px;
+  }
+  .carousel-text-pl{
+    font-size: 65px;
+  }
+  .carousel-btn{
+    padding: 8px 20px;
+    font-size: 10px;
+  }
+}
   
+  @media screen and (max-width: 800px) {
+    .carousel-text {
+ 
+      font-size: 50px;
+  }
+  .carousel-text-px {
+    font-size: 40px;
+  
+    }
+
+    .carousel-text-pl{
+      font-size: 45px;
+    }
+
+    .swiper{
+      margin-top: 80px;
+    }
+  }
+  @media screen and (max-width: 650px) {
+    .carousel-text {
+ 
+      font-size: 30px;
+  }
+  .carousel-text-px {
+    font-size: 30px;
+  
+    }
+
+    .carousel-text-pl{
+      font-size: 30px;
+    }
+    .infos-wrapper{
+      justify-content: center;
+    }
+    .cover-title{
+      font-size: 20px;
+    }
+    .cover-all{
+      font-size: 14px;
+    }
+    .cover-content{
+      padding: 10px;
+    }
+  }
   @media screen and (max-width: 426px) {
     .header .navbar .container .navbar-nav .nav-link {
       font-size: 12px;
+    }
+    .carousel-text {
+      font-size: 16px;
+  }
+  .carousel-text-px {
+    font-size: 16px;
+  
+    }
+
+    .carousel-text-pl{
+      font-size: 16px;
     }
   }
   

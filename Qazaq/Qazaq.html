@@ -259,77 +259,78 @@
         </div>
         <div class="cover-box">
           <a href="" class="cover">
-            <img src="./img/cover1.webp" alt=" " >
+            <img src="./img/cover2.webp" alt=" " >
             <div class="cover-content">
-              <span class="cover-title">Верхняя одежда</span>
+              <span class="cover-title">Толстовки</span>
               <p class="cover-all">Смотреть еще</p>
             </div>
           </a>
         </div>
         <div class="cover-box">
           <a href="" class="cover">
-            <img src="./img/cover1.webp" alt=" " >
+            <img src="./img/cover3.webp" alt=" " >
             <div class="cover-content">
-              <span class="cover-title">Верхняя одежда</span>
+              <span class="cover-title">Джкмперы и Кардиганы</span>
               <p class="cover-all">Смотреть еще</p>
             </div>
           </a>
         </div>
         <div class="cover-box">
           <a href="" class="cover">
-            <img src="./img/cover1.webp" alt=" " >
+            <img src="./img/cover4.webp" alt=" " >
             <div class="cover-content">
-              <span class="cover-title">Верхняя одежда</span>
+              <span class="cover-title">Футболки и Поло</span>
               <p class="cover-all">Смотреть еще</p>
             </div>
           </a>
         </div>
         <div class="cover-box">
           <a href="" class="cover">
-            <img src="./img/cover1.webp" alt=" " >
+            <img src="./img/cover5.webp" alt=" " >
             <div class="cover-content">
-              <span class="cover-title">Верхняя одежда</span>
+              <span class="cover-title">Рубашки</span>
               <p class="cover-all">Смотреть еще</p>
             </div>
           </a>
         </div>
         <div class="cover-box">
           <a href="" class="cover">
-            <img src="./img/cover1.webp" alt=" " >
+            <img src="./img/cover6.webp" alt=" " >
             <div class="cover-content">
-              <span class="cover-title">Верхняя одежда</span>
+              <span class="cover-title">Брюки</span>
               <p class="cover-all">Смотреть еще</p>
             </div>
           </a>
         </div>
-        <div class="cover-box">
+        <div class="cover-box hidden">
           <a href="" class="cover">
-            <img src="./img/cover1.webp" alt=" " >
+            <img src="./img/cover7.webp" alt=" " >
             <div class="cover-content">
-              <span class="cover-title">Верхняя одежда</span>
+              <span class="cover-title">Джинсы</span>
               <p class="cover-all">Смотреть еще</p>
             </div>
           </a>
         </div>
-        <div class="cover-box">
+        <div class="cover-box hidden">
           <a href="" class="cover">
-            <img src="./img/cover1.webp" alt=" " >
+            <img src="./img/cover8.webp" alt=" " >
             <div class="cover-content">
-              <span class="cover-title">Верхняя одежда</span>
+              <span class="cover-title">Пиджаки</span>
               <p class="cover-all">Смотреть еще</p>
             </div>
           </a>
         </div>
-        <div class="cover-box">
+        <div class="cover-box hidden">
           <a href="" class="cover">
-            <img src="./img/cover1.webp" alt=" " >
+            <img src="./img/cover9.webp" alt=" " >
             <div class="cover-content">
-              <span class="cover-title">Верхняя одежда</span>
+              <span class="cover-title">Шорты</span>
               <p class="cover-all">Смотреть еще</p>
             </div>
           </a>
-        </div>
+        </div>       
       </div>
+      <a href="javascript:mainSectionsShowMore()" class="covers-link btn-main-sections-show-more">Смотреть все</a>
       </section>
     </main>
 
@@ -438,6 +439,28 @@
           swiperWrapper.style.transform = `translateX(${offset}px)`;
         }
       });
+
+      
+      function mainSectionsShowMore() {
+    const hiddenElements = document.querySelectorAll('.covers .cover-box.hidden');
+    const elementsCount = hiddenElements.length;
+
+    if (elementsCount === 0) {
+        document.querySelector('.btn-main-sections-show-more').remove();
+        return;
+    }
+
+    const elementsToShow = Math.min(elementsCount, 6);
+    for (let i = 0; i < elementsToShow; i++) {
+        hiddenElements[i].classList.remove('hidden');
+    }
+
+    if (elementsCount <= 6) {
+        document.querySelector('.btn-main-sections-show-more').remove();
+    }
+}
+
+    
     </script>
   </body>
 </html>
